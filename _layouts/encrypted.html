@@ -30,7 +30,7 @@ layout: post
       var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
       // document.getElementById('encrypted_content').innerHTML = plainHTML;
       // Experience_yangsangho_pw
-      link_url = '{{ page.encrypted_link }}'
+      link_url = '{{ page.enc_link }}'
       document.getElementById('encrypted_content').innerHTML = `<a href="/${link_url}">Go Experience</a>`;
     });
   </script>
