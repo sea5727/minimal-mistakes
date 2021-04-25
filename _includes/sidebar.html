@@ -7,7 +7,10 @@
   <script>console.log('sidebar author_profile')</script>
 {% endif %}
 
-<script>console.log(page.title)</script>
+{% if author.home %}
+<script>console.log('author.home..')</script>
+{% endif %}
+
 {% if true %}
  <script>console.log('true..')</script>
 {% endif %}
