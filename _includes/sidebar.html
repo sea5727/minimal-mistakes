@@ -1,4 +1,7 @@
-<script>console.log('sidebar start', page.author_profile)</script>
+<script>console.log('sidebar start')</script>
+{% if !page.author_profile %}
+  <script>console.log('sidebar not author_profile')</script>
+{% endif %}
 
 {% if page.author_profile or layout.author_profile or page.sidebar %}
 <script>console.log('sidebar if')</script>
