@@ -9,6 +9,7 @@ var FileSystem    = require('fs');
 var through       = require('through2');
 var PluginError   = gutil.PluginError;
 
+console.log('gulpfile start?')
 /*
   START FIREWALL TASKS
 */
