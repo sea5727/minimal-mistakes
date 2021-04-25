@@ -21,21 +21,17 @@ layout: post
           encryptedHMAC = encryptedMsg.substring(0, 64),
           encryptedHTML = encryptedMsg.substring(64),
           decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
-      console.log('encryptedMsg:', encryptedMsg)
-      console.log('encryptedHTML:', encryptedHTML)
-      console.log('decryptedHMAC:', decryptedHMAC)
-      console.log('encryptedHMAC:', encryptedHMAC)
+
       if (decryptedHMAC !== encryptedHMAC) {
         alert('Bad passphrase!');
         return;
       }
 
       var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
-      console.log('encryptedHTML:', encryptedHTML)
-      console.log('passphrase:', passphrase)
-      console.log('plainHTML:', plainHTML)
       // document.getElementById('encrypted_content').innerHTML = plainHTML;
-      document.getElementById('encrypted_content').innerHTML = '<a href="/">Go Experience</a>';
+      // Experience_yangsangho_pw
+      link_url = '{{ page.encrypted_link }}',
+      document.getElementById('encrypted_content').innerHTML = `<a href="/${link_url}">Go Experience</a>`;
     });
   </script>
 </div>
