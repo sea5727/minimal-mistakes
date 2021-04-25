@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('gulpfile start?')
+
 var gulp          = require('gulp');
 var gutil         = require('gulp-util');
 
