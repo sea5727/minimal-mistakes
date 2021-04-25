@@ -15,8 +15,11 @@ layout: default
 {% endif %}
 
 <script>console.log('this is archive.html')</script>
+<div id="mytest">
+  <script>console.log('div mytest')</script>
+</div>
 <div id="main" role="main">
-  <script>console.log('include sidebar.html')</script>
+  
   {% include sidebar.html %}
 
   <div class="archive">
