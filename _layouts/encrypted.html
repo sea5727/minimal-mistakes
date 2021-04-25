@@ -25,16 +25,17 @@ layout: post
       console.log('encryptedHTML:', encryptedHTML)
       console.log('decryptedHMAC:', decryptedHMAC)
       console.log('encryptedHMAC:', encryptedHMAC)
-      // if (decryptedHMAC !== encryptedHMAC) {
-      //   alert('Bad passphrase!');
-      //   return;
-      // }
+      if (decryptedHMAC !== encryptedHMAC) {
+        alert('Bad passphrase!');
+        return;
+      }
 
       var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
       console.log('encryptedHTML:', encryptedHTML)
       console.log('passphrase:', passphrase)
       console.log('plainHTML:', plainHTML)
-      document.getElementById('encrypted_content').innerHTML = plainHTML;
+      // document.getElementById('encrypted_content').innerHTML = plainHTML;
+      document.getElementById('encrypted_content').innerHTML = "<h>hello world</h>";
     });
   </script>
 </div>
