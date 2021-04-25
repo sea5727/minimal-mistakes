@@ -15,9 +15,9 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  <script>console.log('archive -> sidebare.html')</script>
+  <script>console.log('archive -> sidebar.html')</script>
   {% include sidebar.html %}
-
+  <script>console.log('archive -> sidebar.html -> end')</script>
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 id="page-title" class="page__title">{{ page.title }}</h1>
