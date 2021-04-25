@@ -21,7 +21,8 @@ layout: post
           encryptedHMAC = encryptedMsg.substring(0, 64),
           encryptedHTML = encryptedMsg.substring(64),
           decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
-
+      console.log('decryptedHMAC:', decryptedHMAC)
+      console.log('encryptedHMAC:', encryptedHMAC)
       if (decryptedHMAC !== encryptedHMAC) {
         alert('Bad passphrase!');
         return;
