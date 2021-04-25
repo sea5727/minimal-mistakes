@@ -1,5 +1,7 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
+  <script>console.log('this is sidebar sticky')</script>
   <div class="sidebar sticky">
+    
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
     {% for s in page.sidebar %}
@@ -17,7 +19,7 @@
   {% endif %}
 
   <!-- add custom sidebar -->
-  <script>console.log('this is sidebar sticky')</script>
+  
   {% if page.sidebar_main %}
     {% include nav_list_main %}
   {% endif %}
