@@ -25,10 +25,10 @@ layout: post
       console.log('encryptedHTML:', encryptedHTML)
       console.log('decryptedHMAC:', decryptedHMAC)
       console.log('encryptedHMAC:', encryptedHMAC)
-      if (decryptedHMAC !== encryptedHMAC) {
-        alert('Bad passphrase!');
-        return;
-      }
+      // if (decryptedHMAC !== encryptedHMAC) {
+      //   alert('Bad passphrase!');
+      //   return;
+      // }
 
       var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
       console.log('encryptedHTML:', encryptedHTML)
