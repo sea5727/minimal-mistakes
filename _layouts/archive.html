@@ -25,3 +25,10 @@ layout: default
     {{ content }}
   </div>
 </div>
+
+
+{% if site.disqus.shortname and page.comments == true %}
+  {% include disqus_comments.html %}
+{% endif %}
+
+<script id="dsq-count-scr" src="//sea5727-github-io.disqus.com/count.js" async></script>
