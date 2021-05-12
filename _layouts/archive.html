@@ -27,5 +27,6 @@ layout: default
 </div>
 
 {% if page.comments == true %}
+  <script>console.log('page.comments == true?')</script>
   {% include disqus_comments.html %}
 {% endif %} 
