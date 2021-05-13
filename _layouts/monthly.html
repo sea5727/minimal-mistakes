@@ -4,8 +4,7 @@ layout: archive
 
 {{ content }}
 
-<script>console.log('this is monthly..')</script>
-{% include sidebar.html %}
+<!-- {% include sidebar.html %} -->
 <ul class="taxonomy__index">
   {% assign postsInMonth = site.posts | group_by_exp: 'post', 'post.date | date: "%Y/%m"' %}
   {% for month in postsInMonth %}
