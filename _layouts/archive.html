@@ -22,13 +22,11 @@ layout: default
     {% endunless %}
     {{ content }}
   </div>
-
-  <!-- {% if page.comments == true %}
-    {% include disqus_comments.html %}
-  {% endif %} -->
 </div>
 
-
+{% if page.comments == true %}
+  {% include disqus_comments.html %}
+{% endif %}
 
 
 <!-- <script id="dsq-count-scr" src="//sea5727-github-io.disqus.com/count.js" async></script> -->
